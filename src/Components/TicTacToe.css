@@ -1,0 +1,60 @@
+.game-container {
+    text-align: center;
+  }
+  
+  .board-game {
+     display: grid;
+    grid-template-columns: repeat(3, 100px); 
+    grid-gap: 10px;
+    margin: 20px auto;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #333;
+    transition: background-color 0.3s;
+  }
+  
+  .square:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .winning-square {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .scoreboard {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .winner-message p {
+    font-size: 1.5rem;
+    color: #ff5722;
+  }
+  
+  .reset-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .reset-button:hover {
+    background-color: #e64a19;
+  }
+  
+  .timer {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #2196f3;
+  }
+  

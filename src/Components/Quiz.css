@@ -1,0 +1,18 @@
+.quiz {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

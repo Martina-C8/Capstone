@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import NavigationBar from './Components/Navbar';
+import FifteenGame from './Components/FifteenGame';
+import Sudoku from './Components/Sudoku';
+import Memory from './Components/Memory';
+import Quiz from './Components/Quiz';
+import './Components/Navbar.css'
+import TicTacToe from './Components/TicTacToe';
+import Login from './Components/Login';
+import SignUp from './Components/SignUp';
+import {AuthProvider} from './contexts/AuthContext';
+import UserProfile from './Components/UserProfile';
+import Logout from './Components/Logout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+    <Router>
+      <NavigationBar />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/fifteen" element={<FifteenGame />} />
+        <Route path="/sudoku" element={<Sudoku />} />
+        <Route path="/memory" element={<Memory />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/tictactoe" element={<TicTacToe />} />
+        <Route path="/" element={<Navigate to="/login" />} />        
+        <Route path="/profile" element= {<UserProfile/>} />
+        <Route path="/logout" element= {<Logout/>} />
+      </Routes>
+    </Router>
+    </AuthProvider>
   );
 }
 

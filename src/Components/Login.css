@@ -1,0 +1,174 @@
+/* Stile generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+   body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black;   */
+  } 
+  
+  /* Contenitore del login */
+  .container { 
+    position:fixed;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vh;
+    background-color: black;
+  }
+  
+  /* Effetto animato dei quadrati */
+  .square1 {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .square1 i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+  }
+  
+  .square1 i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+  }
+  
+  .square1 i:nth-child(2) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
+  }
+  
+  .square1 i:nth-child(3) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate2 10s linear infinite;
+  }
+  
+  .square1:hover i {
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate2 {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Stile della form di login */
+  .login {
+    position: absolute;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .login h2 {
+    font-size: 2em;
+    color: #fff;
+  }
+  
+  /* Campi di input */
+  .inputBx {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .inputBx input {
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    outline: none;
+  }
+  
+  /* .inputBx input[type="submit"] {
+    background: #0078ff;
+    background: linear-gradient(45deg, #1c2dad, #310e77);
+    border: none;
+    cursor: pointer;
+  }
+   */
+   .inputBx input[type="submit"], .submitButton {
+    background: #0078ff;
+    background: linear-gradient(45deg, #1c2dad, #310e77);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 40px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+}
+
+.inputBx input[type="submit"]:hover, .submitButton:hover {
+    background: linear-gradient(45deg, #1c2dad, #3e0f8e);
+}
+  .inputBx input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  /* Stile dei link */
+  .links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+  }
+  
+  .links a:hover {
+    color: #0078ff;
+  }
+  
+  /* Stile per messaggi di errore */
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+
+  /* Messaggio di successo per la registrazione */
+.success {
+  color: green;
+  font-size: 0.9em;
+  text-align: center;
+}
+  

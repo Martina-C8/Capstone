@@ -1,0 +1,53 @@
+.navbar {
+    padding: 1rem; /* Padding interno */
+    align-items: center; /* Centratura verticale */
+    color: #61dafb; /* Colore del testo */
+    font-size: 18px; /* Dimensione del font */
+    font-weight: bold; /* Grassetto */
+
+}
+.navbar ul {
+  list-style: none; /* Rimuovi i punti dalla lista */
+  display: flex; /* Allineamento orizzontale */
+  padding: 0; /* Rimuovi padding */
+  margin: 0; /* Rimuovi margini */
+}
+
+.navbar li {
+  margin: 0 15px; /* Margine tra i link */
+}
+
+.navbar a {
+  text-decoration: none; /* Rimuovi sottolineatura */
+  color: #61dafb; /* Colore dei link */
+  font-size: 18px; /* Dimensione del font */
+  transition: color 0.3s ease; /* Transizione colore */
+}
+
+.navbar a:hover {
+  color: #21a1f1; /* Colore al passaggio del mouse */
+}
+
+  
+  .navbar ul {
+    list-style: none; /* Rimuovi i punti dalla lista */
+    display: flex; /* Allineamento orizzontale */
+    padding: 0; /* Rimuovi padding */
+    margin: 0; /* Rimuovi margini */
+  }
+  
+  .navbar li {
+    margin: 0 15px; /* Margine tra i link */
+  }
+  
+  .navbar a {
+    text-decoration: none; /* Rimuovi sottolineatura */
+    color: #61dafb; /* Colore dei link */
+    font-size: 18px; /* Dimensione del font */
+    transition: color 0.3s ease; /* Transizione colore */
+  }
+  
+  .navbar a:hover {
+    color: #21a1f1; /* Colore al passaggio del mouse */
+  }
+  
